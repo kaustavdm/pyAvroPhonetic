@@ -1,2 +1,4 @@
-include *.rst ChangeLog LICENSE MANIFEST.in
-recursive-include ChangeLog LICENSE *.txt *.py *.rst *.md
+include *.rst
+include LICENSE
+include ChangeLog
+recursive-include pyavrophonetic  *.txt *.py *.rst *.md
