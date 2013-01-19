@@ -7,18 +7,18 @@ software [Avro Phonetic](http://omicronlab.com).
 Overview
 --------
 
-pyAvroPhonetic provides a Python module that can be imported and used
+pyAvroPhonetic provides a Python packae that can be imported and used
 by other Python programs or scripts. It implements the *Avro Phonetic
 Dictionary Search Library* by
 [Mehdi Hasan Khan](https://github.com/omicronlab).
 
-*N.B. This module is still experimental and is not (yet) fit for
+*N.B. This package is still experimental and is not (yet) fit for
  production use.*
 
 Inspirations
 ------------
 
-This module is inspired from
+This package is inspired from
 [Rifat Nabi](https://github.com/torifat)'s
 [jsAvroPhonetic](https://github.com/torifat/jsAvroPhonetic).
 
