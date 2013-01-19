@@ -18,7 +18,39 @@ production use.*
 Inspirations
 ------------
 
-This package is inspired from `Rifat Nabi`_\'s `jsAvroPhonetic`_.
+This package is inspired from `Rifat Nabi`_\'s `jsAvroPhonetic`_. So
+far, the code is a direct (and shameless) translation of
+jsAvroPhonetic into Python.
+
+Installation
+============
+
+Using Git:
+
+::
+
+    $ git clone https://github.com/kaustavdm/pyAvroPhonetic
+    $ cd pyAvroPhonetic
+    $ sudo python setup.py install
+
+
+Using Pip:
+
+::
+
+    $ sudo pip install PyAvroPhonetic
+
+
+Usage
+=====
+
+At present only a subset of features have been implemented. When
+implemented, the parser can be accessed as:
+
+::
+
+    >>> from pyavrophonetic import avro
+    >>> avro.parse('aami banglay gaan gai')
 
 Contributing
 ============
