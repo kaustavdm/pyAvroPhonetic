@@ -1,36 +1,32 @@
+==============
 pyAvroPhonetic
 ==============
 
-A Python implementation of the popular Bengali phonetic-typing
-software [Avro Phonetic](http://omicronlab.com).
+A Python implementation of the popular Bengali phonetic-typing software
+`Avro Phonetic`_.
 
 Overview
---------
+========
 
 pyAvroPhonetic provides a Python package that can be imported and used
 by other Python programs or scripts. It implements the *Avro Phonetic
-Dictionary Search Library* by
-[Mehdi Hasan Khan](https://github.com/omicronlab).
+Dictionary Search Library* by `Mehdi Hasan Khan`_.
 
 *N.B. This package is still experimental and is not (yet) fit for
- production use.*
+production use.*
 
 Inspirations
 ------------
 
-This package is inspired from
-[Rifat Nabi](https://github.com/torifat)'s
-[jsAvroPhonetic](https://github.com/torifat/jsAvroPhonetic).
+This package is inspired from `Rifat Nabi`_\'s `jsAvroPhonetic`_.
 
 Contributing
 ============
 
 **Fork** -> **Do your changes** -> **Send a Pull Request**. It's that
-  easy!
+easy!
 
-Coding style follows
-[PEP 8](http://www.python.org/dev/peps/pep-0008/) along with
-[PEP 257](http://www.python.org/dev/peps/pep-0257/) for Docstring
+Coding style follows `PEP 8`_ along with `PEP 257`_ for Docstring
 conventions.
 
 Also, if you find any bugs, please report them in the Issues queue. As
@@ -40,7 +36,9 @@ been already posted by someone else.
 License
 =======
 
-Copyright (C) 2013 Kaustav Das Modak <kaustav.dasmodak@yahoo.co.in\>.
+Copyright (C) 2013 Kaustav Das Modak <kaustav.dasmodak@yahoo.co.in>.
+
+::
 
     This file is part of pyAvroPhonetic.
 
@@ -57,4 +55,11 @@ Copyright (C) 2013 Kaustav Das Modak <kaustav.dasmodak@yahoo.co.in\>.
     You should have received a copy of the GNU General Public License
     along with pyAvroPhonetic.  If not, see <http://www.gnu.org/licenses/>.
 
-The full license text can be found in `LICENSE`.
+The full license text can be found in ``LICENSE``.
+
+.. _Avro Phonetic: http://omicronlab.com
+.. _Mehdi Hasan Khan: https://github.com/omicronlab
+.. _Rifat Nabi: https://github.com/torifat
+.. _jsAvroPhonetic: https://github.com/torifat/jsAvroPhonetic
+.. _PEP 8: http://www.python.org/dev/peps/pep-0008/
+.. _PEP 257: http://www.python.org/dev/peps/pep-0257/
