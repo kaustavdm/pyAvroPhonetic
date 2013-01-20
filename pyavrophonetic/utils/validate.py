@@ -66,6 +66,11 @@ def is_case_sensitive(text):
     else:
         return False
 
+def is_exact(needle, haystack, start, end, matchnot):
+    """Check exact occurrence of needle in haystack"""
+    return (start >= 0 and end < len(haystack) and
+            (haystack[start:end] == needle) ^ matchnot)
+
 def fix_string_case(text):
     """Converts case-insensitive characters to lower case
 

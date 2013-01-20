@@ -100,3 +100,10 @@ class TestUtilsValidate(unittest.TestCase):
         # 'raMgoRurer Chana' should become 'ramgoRurer chana'
         self.assertEquals(validate.fix_string_case('raMgoRurer Chana'),
                           'ramgoRurer chana')
+
+    def test_is_exact(self):
+        """Test exact search response of needle in haystack"""
+        self.assertTrue(validate.is_exact('abcd', 'abcdefgh', 0, 4, False))
+        self.assertFalse(validate.is_exact('abcd', 'abcdefgh', 0, 4, True))
+        self.assertFalse(validate.is_exact('bcd', 'abcdefgh', 0, 4, False))
+        self.assertTrue(validate.is_exact('bcd', 'abcdefgh', 0, 4, True))
