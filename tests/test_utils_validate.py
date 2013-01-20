@@ -25,7 +25,7 @@ along with pyAvroPhonetic.  If not, see <http://www.gnu.org/licenses/>.
 
 # Imports
 import unittest
-from pyavrophonetic.utils import Validate
+from pyavrophonetic.utils import validate
 
 
 class TestUtilsValidate(unittest.TestCase):
@@ -33,7 +33,6 @@ class TestUtilsValidate(unittest.TestCase):
 
     def setUp(self):
         """Set up test environment"""
-        self.validate = Validate()
         self.vowels = 'aeiou'
         self.consonants = 'bcdfghjklmnpqrstvwxyz'
         self.numbers = '0123456789'
@@ -42,31 +41,31 @@ class TestUtilsValidate(unittest.TestCase):
         """Test that consonants are correctly identified"""
         # Test all defined consonants. Should be True
         for i in self.consonants + self.consonants.upper():
-            self.assertTrue(self.validate.is_consonant(i))
+            self.assertTrue(validate.is_consonant(i))
         # Test all defined consonants to be vowels or numbers. Should
         # be False
         for i in self.vowels + self.numbers:
-            self.assertFalse(self.validate.is_consonant(i))
+            self.assertFalse(validate.is_consonant(i))
 
     def test_is_number(self):
         """Test that numbers are correctly identified"""
         # Test all defined numbers. Should be True
         for i in self.numbers:
-            self.assertTrue(self.validate.is_number(i))
+            self.assertTrue(validate.is_number(i))
         # Test all defined numbers to be vowels or consonants. Should
         # be False
         for i in self.vowels + self.consonants:
-            self.assertFalse(self.validate.is_number(i))
+            self.assertFalse(validate.is_number(i))
 
     def test_is_vowel(self):
         """Test that vowels are correctly identified"""
         # Test all defined vowels. Should be True
         for i in self.vowels + self.vowels.upper():
-            self.assertTrue(self.validate.is_vowel(i))
+            self.assertTrue(validate.is_vowel(i))
         # Test all defined consonants to be vowels or numbers. Should
         # be False
         for i in self.consonants + self.numbers:
-            self.assertFalse(self.validate.is_vowel(i))
+            self.assertFalse(validate.is_vowel(i))
 
     def test_is_punctuation(self):
         """Test that punctuations are correctly identified
@@ -76,7 +75,7 @@ class TestUtilsValidate(unittest.TestCase):
 
         """
         for i in '`~!@#$%^&*()-_=+\\|[{}]\'",<.>/?':
-            self.assertTrue(self.validate.is_punctuation(i))
-            self.assertFalse(self.validate.is_vowel(i))
-            self.assertFalse(self.validate.is_consonant(i))
-            self.assertFalse(self.validate.is_number(i))
+            self.assertTrue(validate.is_punctuation(i))
+            self.assertFalse(validate.is_vowel(i))
+            self.assertFalse(validate.is_consonant(i))
+            self.assertFalse(validate.is_number(i))
