@@ -10,4 +10,6 @@ python:
 install:
   - pip install . --use-mirrors
   - pip install -r requirements.txt --use-mirrors
-script: nosetests --exe -v
+script: 
+  - nosetests --exe -v
+  - pylint pyavrophonetic
