@@ -29,7 +29,7 @@ from pyavrophonetic.utils import validate
 
 
 class TestUtilsValidate(unittest.TestCase):
-    """Tests validation methods for pyavrophonetic.utils.Validate"""
+    """Tests validation methods for pyavrophonetic.utils.validate"""
 
     def setUp(self):
         """Set up test environment"""

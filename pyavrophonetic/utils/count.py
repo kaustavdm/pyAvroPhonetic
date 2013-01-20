@@ -32,7 +32,7 @@ def count_vowels(text):
     """Count number of occurrences of vowels in a given string"""
     count = 0
     for i in text:
-        if i in config.AVRO_VOWELS:
+        if i.lower() in config.AVRO_VOWELS:
             count += 1
     return count
 
@@ -40,6 +40,6 @@ def count_consonants(text):
     """Count number of occurrences of consonants in a given string"""
     count = 0
     for i in text:
-        if i in config.AVRO_CONSONANTS:
+        if i.lower() in config.AVRO_CONSONANTS:
             count += 1
     return count
