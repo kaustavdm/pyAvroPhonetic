@@ -1,0 +1,2 @@
+nose
+simplejson>=3.0.0

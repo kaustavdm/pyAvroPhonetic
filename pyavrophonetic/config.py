@@ -26,7 +26,7 @@ along with pyAvroPhonetic.  If not, see <http://www.gnu.org/licenses/>.
 
 # Imports
 import os
-import json
+import simplejson as json
 
 
 # Constants
