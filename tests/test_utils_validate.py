@@ -79,3 +79,24 @@ class TestUtilsValidate(unittest.TestCase):
             self.assertFalse(validate.is_vowel(i))
             self.assertFalse(validate.is_consonant(i))
             self.assertFalse(validate.is_number(i))
+
+    def test_fix_string_case(self):
+        """Test phonetic-compatible case-transformations of strings
+
+        This ensures validate.fix_strings function works as
+        expected. It should properly change text to lowercase but
+        retain case-sensitive characters defined in config as
+        uppercase.
+        """
+        # 'ABOL taBOL' should become 'abOl tabOl'
+        self.assertEquals(validate.fix_string_case('ABOL taBOl'),
+                          'abOl tabOl')
+        # 'KhiCuRi' should become 'khicuRi'
+        self.assertEquals(validate.fix_string_case('KhiCuRi'),
+                          'khicuRi')
+        # 'KaTh-BuRO' should become 'kaTh-buRO'
+        self.assertEquals(validate.fix_string_case('KaTh-BuRO'),
+                          'kaTh-buRO')
+        # 'raMgoRurer Chana' should become 'ramgoRurer chana'
+        self.assertEquals(validate.fix_string_case('raMgoRurer Chana'),
+                          'ramgoRurer chana')

@@ -66,8 +66,14 @@ def is_case_sensitive(text):
     else:
         return False
 
-def fix_string(text):
-    """Implement fix string method"""
+def fix_string_case(text):
+    """Converts case-insensitive characters to lower case
+
+    Case-sensitive characters as defined in config.AVRO_CASESENSITIVES
+    retain their case, but others are converted to their lowercase
+    equivalents. The result is a string with phonetic-compatible case
+    which will the parser will understand without confusion.
+    """
     fixed = []
     for i in text:
         if is_case_sensitive(i):
