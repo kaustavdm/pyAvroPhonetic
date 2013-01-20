@@ -1,3 +1,21 @@
+2013-01-20  Kaustav Das Modak  <kaustav.dasmodak@yahoo.co.in>
+
+	* tests/test_utils_count.py: Addded tests for utils.count
+
+	* pyavrophonetic/config.py: Switched to simplejson
+	Used simplejson for faster parsing of json files
+
+	* README.rst (Branch): Updated README with instructions
+	Added Travis CI badge along with installation and usage instructions
+
+	* .travis.yml (python): Added Travis-CI support
+
+	* tests/test_utils_validate.py: Added tests for utils.validation
+
+	* pyavrophonetic/utils/count.py: Refactored code
+
+	* pyavrophonetic/utils/validate.py: Refactored code
+
 2013-01-19  Kaustav Das Modak  <kaustav.dasmodak@yahoo.co.in>
 
 	* pyavrophonetic/test/: Added barebones test structure

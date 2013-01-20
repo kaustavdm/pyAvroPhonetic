@@ -28,4 +28,4 @@ from pyavrophonetic.utils import validate
 
 def parse(text):
     """Parse text input and produce Bengali output"""
-    return validate.fix_string(text)
+    return validate.fix_string_case(text)
