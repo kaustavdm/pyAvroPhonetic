@@ -6,5 +6,7 @@ setup.py
 pyavrophonetic/__init__.py
 pyavrophonetic/avro.py
 pyavrophonetic/config.py
-pyavrophonetic/utils.py
 pyavrophonetic/resources/avrodict.json
+pyavrophonetic/utils/__init__.py
+pyavrophonetic/utils/count.py
+pyavrophonetic/utils/validate.py

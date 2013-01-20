@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-"""Provides the main library for Avro Phonetic
+"""Utils package for Avro Phonetic.
 
 -------------------------------------------------------------------------------
 
@@ -22,10 +22,3 @@ You should have received a copy of the GNU General Public License
 along with pyAvroPhonetic.  If not, see <http://www.gnu.org/licenses/>.
 
 """
-
-# Imports
-from pyavrophonetic.utils import validate
-
-def parse(text):
-    """Parse text input and produce Bengali output"""
-    return validate.fix_string_case(text)

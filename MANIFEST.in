@@ -1,4 +1,4 @@
 include *.rst
 include LICENSE
 include ChangeLog
-recursive-include pyavrophonetic *.json  *.txt *.py *.rst *.md
+recursive-include pyavrophonetic *.json *.py

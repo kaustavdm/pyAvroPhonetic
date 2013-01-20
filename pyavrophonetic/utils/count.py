@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-"""Provides the main library for Avro Phonetic
+"""Provides count functions for pyAvroPhonetic
 
 -------------------------------------------------------------------------------
 
@@ -23,9 +23,23 @@ along with pyAvroPhonetic.  If not, see <http://www.gnu.org/licenses/>.
 
 """
 
-# Imports
-from pyavrophonetic.utils import validate
 
-def parse(text):
-    """Parse text input and produce Bengali output"""
-    return validate.fix_string_case(text)
+# Imports
+from pyavrophonetic import config
+
+
+def count_vowels(text):
+    """Count number of occurrences of vowels in a given string"""
+    count = 0
+    for i in text:
+        if i.lower() in config.AVRO_VOWELS:
+            count += 1
+    return count
+
+def count_consonants(text):
+    """Count number of occurrences of consonants in a given string"""
+    count = 0
+    for i in text:
+        if i.lower() in config.AVRO_CONSONANTS:
+            count += 1
+    return count
