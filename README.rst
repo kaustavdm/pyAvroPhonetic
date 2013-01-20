@@ -5,6 +5,8 @@ pyAvroPhonetic
 A Python implementation of the popular Bengali phonetic-typing software
 `Avro Phonetic`_.
 
+Branch: Master: |Master| | Develop: |Develop|
+
 Overview
 ========
 
@@ -95,3 +97,7 @@ The full license text can be found in ``LICENSE``.
 .. _jsAvroPhonetic: https://github.com/torifat/jsAvroPhonetic
 .. _PEP 8: http://www.python.org/dev/peps/pep-0008/
 .. _PEP 257: http://www.python.org/dev/peps/pep-0257/
+.. |Master| image:: https://travis-ci.org/kaustavdm/pyAvroPhonetic.png?branch=master
+   :target: https://travis-ci.org/kaustavdm/pyAvroPhonetic
+.. |Develop| image:: https://travis-ci.org/kaustavdm/pyAvroPhonetic.png?branch=develop
+   :target: https://travis-ci.org/kaustavdm/pyAvroPhonetic
