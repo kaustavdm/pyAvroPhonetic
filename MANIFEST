@@ -7,3 +7,4 @@ pyavrophonetic/__init__.py
 pyavrophonetic/avro.py
 pyavrophonetic/config.py
 pyavrophonetic/utils.py
+pyavrophonetic/resources/avrodict.json
