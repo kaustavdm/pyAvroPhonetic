@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-"""Provides test cases for pyavrophonetic.avro.utils.Validate()
+"""Provides test cases for pyavrophonetic.avro.utils.validate
 
 -------------------------------------------------------------------------------
 
