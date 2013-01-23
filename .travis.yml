@@ -12,4 +12,4 @@ install:
   - pip install -r requirements.txt --use-mirrors
 script: 
   - nosetests --exe -v
-  - pylint pyavrophonetic
+  - pylint --rc-file=pylint-rc.ini pyavrophonetic
