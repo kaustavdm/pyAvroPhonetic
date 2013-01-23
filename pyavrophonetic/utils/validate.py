@@ -61,7 +61,7 @@ def is_punctuation(text):
 
 def is_case_sensitive(text):
     """Check if given string is case sensitive"""
-    if text.lower().encode('utf-8') in config.AVRO_CASESENSITIVES:
+    if text.lower() in config.AVRO_CASESENSITIVES:
         return True
     else:
         return False

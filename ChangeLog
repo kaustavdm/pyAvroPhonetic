@@ -1,3 +1,11 @@
+2013-01-24  Kaustav Das Modak  <kaustav.dasmodak@yahoo.co.in>
+
+	* pyavrophonetic/utils/__init__.py (utf): Shortcut unicode convert
+
+	* tests/test_avro.py : Added tests for avro.parse
+
+	* pyavrophonetic/avro.py : Started working on a basic parser
+
 2013-01-20  Kaustav Das Modak  <kaustav.dasmodak@yahoo.co.in>
 
 	* tests/test_utils_count.py: Addded tests for utils.count
