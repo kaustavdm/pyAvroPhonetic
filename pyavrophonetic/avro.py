@@ -45,7 +45,7 @@ def parse(text):
 
     ::
       from pyavrophonetic import avro
-      found, replaced = avro.parse("ami banglay gan gai")
+      avro.parse("ami banglay gan gai")
 
     """
     # Sanitize text case to meet phonetic comparison standards
