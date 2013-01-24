@@ -1,3 +1,15 @@
+2013-01-25  Kaustav Das Modak  <kaustav.dasmodak@yahoo.co.in>
+
+	* README.rst : Added Acknowledgements section
+
+	* tests/test_utils_validate.py (test_is_exact): Added assertions
+
+	* tests/test_avro.py: Updated tests for parser
+
+	* pyavrophonetic/avro.py: Implemented basic parser
+
+	* pyavrophonetic/utils/validate.py (is_exact): Fixed XOR handling
+
 2013-01-24  Kaustav Das Modak  <kaustav.dasmodak@yahoo.co.in>
 
 	* pyavrophonetic/utils/__init__.py (utf): Shortcut unicode convert
