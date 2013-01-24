@@ -107,3 +107,6 @@ class TestUtilsValidate(unittest.TestCase):
         self.assertFalse(validate.is_exact('abcd', 'abcdefgh', 0, 4, True))
         self.assertFalse(validate.is_exact('bcd', 'abcdefgh', 0, 4, False))
         self.assertTrue(validate.is_exact('bcd', 'abcdefgh', 0, 4, True))
+        # Test with substring out of string's range
+        self.assertFalse(validate.is_exact('a', 'a', 1, 2, False))
+        self.assertTrue(validate.is_exact('a', 'a', 1, 2, True))
