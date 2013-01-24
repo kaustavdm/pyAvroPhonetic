@@ -67,6 +67,17 @@ Also, if you find any bugs, please report them in the Issues queue. As
 always, before you report any new issue, please check that it has not
 been already posted by someone else.
 
+Acknowledgements
+================
+
+ - Mehdi Hasan Khan for originally developing and maintaining Avro
+   Phonetic
+ - Rifat Nabi for porting it to Javascript
+ - `Md Enzam Hossain`_ for helping me understand the ins and outs of
+   the Avro dictionary and the way it works
+ - `Sarim Khan`_ for writing ibus-avro which helped to clarify my
+   concepts further
+
 License
 =======
 
@@ -101,3 +112,5 @@ The full license text can be found in ``LICENSE``.
    :target: https://travis-ci.org/kaustavdm/pyAvroPhonetic
 .. |Develop| image:: https://travis-ci.org/kaustavdm/pyAvroPhonetic.png?branch=develop
    :target: https://travis-ci.org/kaustavdm/pyAvroPhonetic
+.. _Md Enzam Hossain: https://github.com/ienzam
+.. _Sarim Khan: https://github.com/sarim

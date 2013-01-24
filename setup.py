@@ -11,6 +11,7 @@ setup(name='PyAvroPhonetic',
       author_email='kaustav.dasmodak@yahoo.co.in',
       url='https://github.com/kaustavdm/pyAvroPhonetic',
       packages=['pyavrophonetic',],
+      install_requires=["simplejson >= 3.0.0"],
       license='GNU GPL v3 or later',
       classifiers=[
         'Development Status :: 1 - Planning',

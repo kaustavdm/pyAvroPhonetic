@@ -30,41 +30,29 @@ from pyavrophonetic import config
 
 def is_vowel(text):
     """Check if given string is a vowel"""
-    if text.lower().encode('utf-8') in config.AVRO_VOWELS:
-        return True
-    else:
-        return False
+    return text.lower() in config.AVRO_VOWELS
 
 def is_consonant(text):
     """Check if given string is a consonant"""
-    if text.lower().encode('utf-8') in config.AVRO_CONSONANTS:
-        return True
-    else:
-        return False
+    return text.lower() in config.AVRO_CONSONANTS
 
 def is_number(text):
     """Check if given string is a number"""
-    if text.lower().encode('utf-8') in config.AVRO_NUMBERS:
-        return True
-    else:
-        return False
+    return text.lower() in config.AVRO_NUMBERS
 
 def is_punctuation(text):
     """Check if given string is a punctuation"""
-    text = text.lower().encode('utf-8')
-    if (text in config.AVRO_VOWELS or
-        text in config.AVRO_CONSONANTS or
-        text in config.AVRO_NUMBERS):
-        return False
-    else:
-        return True
+    return not (text.lower() in config.AVRO_VOWELS or
+                text.lower() in config.AVRO_CONSONANTS)
 
 def is_case_sensitive(text):
     """Check if given string is case sensitive"""
-    if text.lower().encode('utf-8') in config.AVRO_CASESENSITIVES:
-        return True
-    else:
-        return False
+    return text.lower() in config.AVRO_CASESENSITIVES
+
+def is_exact(needle, haystack, start, end, matchnot):
+    """Check exact occurrence of needle in haystack"""
+    return ((start >= 0 and end < len(haystack) and
+             haystack[start:end] == needle) ^ matchnot)
 
 def fix_string_case(text):
     """Converts case-insensitive characters to lower case
