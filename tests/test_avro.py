@@ -88,6 +88,7 @@ class TestAvro(unittest.TestCase):
         self.assertEquals(utf("ই"), avro.parse("i"))
         self.assertEquals(utf("ঈ"), avro.parse("I"))
         self.assertEquals(utf("উ"), avro.parse("u"))
+        self.assertEquals(utf("উ"), avro.parse("oo"))
         self.assertEquals(utf("ঊ"), avro.parse("U"))
         self.assertEquals(utf("এ"), avro.parse("e"))
         self.assertEquals(utf("ঐ"), avro.parse("OI"))
@@ -104,10 +105,17 @@ class TestAvro(unittest.TestCase):
         self.assertEquals(utf('অভ্র'), avro.parse('অভ্র'))
         # mixed string
         self.assertEquals(utf('বআবা গো'), avro.parse('বaba gO'))
+        self.assertEquals(utf('আমি বাংলায় গান গাই'),
+                          avro.parse('aমি বাংলায় gaন গাi'))
 
     def test_words_with_punctuations(self):
         """Test parsing of words with punctuations"""
-        self.assertEquals(utf('আয়রে'), avro.parse('ayre'))
+        self.assertEquals(utf('আয়রে,'), avro.parse('ayre,'))
         self.assertEquals(utf('ভোলা'), avro.parse('bhOla'))
         self.assertEquals(utf('খেয়াল'), avro.parse('kheyal'))
         self.assertEquals(utf('খোলা'), avro.parse('khOla'))
+
+    def test_sentences(self):
+        """Test parsing of sentences"""
+        self.assertEquals(utf('আমি বাংলায় গান গাই'),
+                          avro.parse('ami banglay gan gai'))
