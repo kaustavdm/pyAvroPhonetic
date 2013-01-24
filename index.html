@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>pyAvroPhonetic by kaustavdm</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>pyAvroPhonetic</h1>
+        <p>Python implementation of Avro Phonetic</p>
+
+        <p class="view"><a href="https://github.com/kaustavdm/pyAvroPhonetic">View the Project on GitHub <small>kaustavdm/pyAvroPhonetic</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/kaustavdm/pyAvroPhonetic/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/kaustavdm/pyAvroPhonetic/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/kaustavdm/pyAvroPhonetic">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>pyAvroPhonetic</h1>
+
+<p>A Python implementation of the popular Bengali phonetic-typing software
+<a href="http://omicronlab.com/">Avro Phonetic</a>.</p>
+
+<h1>Overview</h1>
+
+<p><strong>pyAvroPhonetic</strong> provides a Python package that can be imported and used
+by other Python programs or scripts. It implements the <em>Avro Phonetic
+Dictionary Search Library</em> by <a href="http://github.com/mugli">Mehdi Hasan Khan</a>.</p>
+
+<p><em>N.B. This package is still experimental and is not (yet) fit for
+production use.</em></p>
+
+<h2>Inspirations</h2>
+
+<p>This package is inspired from <a href="https://github.com/torifat">Rifat Nabi</a>'s <a href="https://github.com/torifat/jsAvroPhonetic">jsAvroPhonetic</a>. So
+far, the code is a direct (and shameless) translation of
+jsAvroPhonetic into Python.</p>
+
+<h2>Installation</h2>
+
+<p>Using Git:</p>
+
+<pre><code>$ git clone https://github.com/kaustavdm/pyAvroPhonetic
+$ cd pyAvroPhonetic
+$ sudo python setup.py install
+</code></pre>
+
+<p>Using Pip:</p>
+
+<pre><code>$ sudo pip install PyAvroPhonetic
+</code></pre>
+
+<h2>Usage</h2>
+
+<p>At present only a subset of features have been implemented. When
+implemented, the parser can be accessed as:</p>
+
+<div class="highlight"><pre><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pyavrophonetic</span> <span class="kn">import</span> <span class="n">avro</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span> <span class="n">avro</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s">'aami banglay gaan gai'</span><span class="p">)</span>
+<span class="err">আমি</span> <span class="err">বাংলায়</span> <span class="err">গান</span> <span class="err">গাই</span>
+</pre></div>
+
+<h2>Contributing</h2>
+
+<p><strong>Fork</strong> -&gt; <strong>Do your changes</strong> -&gt; <strong>Send a Pull Request</strong>. It's that
+easy!</p>
+
+<p>Coding style follows <a href="http://www.python.org/dev/peps/pep-0008/">PEP 8</a> along with <a href="http://www.python.org/dev/peps/pep-0257/">PEP 257</a> for Docstring
+conventions.</p>
+
+<p>Also, if you find any bugs, please report them in the Issues queue. As
+always, before you report any new issue, please check that it has not
+been already posted by someone else.</p>
+
+<h2>Acknowledgements</h2>
+
+<ul>
+<li>Mehdi Hasan Khan for originally developing and maintaining Avro
+Phonetic</li>
+<li>Rifat Nabi for porting it to Javascript</li>
+<li>
+<a href="https://github.com/ienzam">Md Enzam Hossain</a> for helping me understand the ins and outs of
+the Avro dictionary and the way it works</li>
+<li>
+<a href="https://github.com/sarim">Sarim Khan</a> for writing ibus-avro which helped to clarify my
+concepts further</li>
+</ul><h2>License</h2>
+
+<p>Copyright (C) 2013 Kaustav Das Modak <a href="mailto:kaustav.dasmodak@yahoo.co.in">kaustav.dasmodak@yahoo.co.in</a>.</p>
+
+<pre><code>This file is part of pyAvroPhonetic.
+
+pyAvroPhonetic is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+pyAvroPhonetic is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with pyAvroPhonetic.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+</code></pre>
+
+<p>The full license text can be found in <code>LICENSE</code>.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/kaustavdm">kaustavdm</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
