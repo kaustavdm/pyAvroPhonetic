@@ -10,11 +10,17 @@ Branch: Master: |Master| | Develop: |Develop|
 Overview
 ========
 
-pyAvroPhonetic provides a Python package that can be imported and used
-by other Python programs or scripts. It implements the *Avro Phonetic
-Dictionary Search Library* by `Mehdi Hasan Khan`_.
+pyAvroPhonetic provides a Python package which includes a text parser
+that converts Bangla written in Roman script to its phonetic
+equivalent in Bangla. It implements the *Avro Phonetic Dictionary
+Search Library* by `Mehdi Hasan Khan`_.
 
-*N.B. This package is still experimental and is not (yet) fit for
+Currently supported and tested Python versions are 2.5, 2.6 and
+2.7. The code has not been tested on Python 3, but porting it to
+Python 3 is on the agenda. It will be possible once the simplejson
+library is stable for Python 3.
+
+*N.B. This package is under development and is not yet fit for
 production use.*
 
 Inspirations
@@ -27,21 +33,32 @@ jsAvroPhonetic into Python.
 Installation
 ============
 
-Using Git:
-
-::
-
-    $ git clone https://github.com/kaustavdm/pyAvroPhonetic
-    $ cd pyAvroPhonetic
-    $ sudo python setup.py install
-
-
-Using Pip:
+Using Pip (the easy way):
 
 ::
 
     $ sudo pip install PyAvroPhonetic
 
+Using Git (needs git):
+
+::
+
+    $ git clone https://github.com/kaustavdm/pyAvroPhonetic
+    $ cd pyAvroPhonetic
+    $ python setup.py build
+    $ sudo python setup.py install
+
+Using Git in a Virtualenv (needs git and virtualenv):
+
+::
+
+    $ virtualenv --distribute pyAvroPhonetic
+    $ cd pyAvroPhonetic
+    $ source bin/activate
+    $ git clone https://github.com/kaustavdm/pyAvroPhonetic
+    $ cd pyAvroPhonetic
+    $ python setup.py build
+    $ python setup.py install
 
 Usage
 =====
@@ -60,10 +77,49 @@ Contributing
 **Fork** -> **Do your changes** -> **Send a Pull Request**. It's that
 easy!
 
-Coding style follows `PEP 8`_ along with `PEP 257`_ for Docstring
-conventions.
+Note for developers
+-------------------
 
-Also, if you find any bugs, please report them in the Issues queue. As
+Coding style follows `PEP 8`_ along with `PEP 257`_ for Docstring
+conventions. Unit tests are run using the Nose library and syntax and style
+checking is done with Pylint.
+
+Please install these two libraries in your development
+environment. The `tests/requirements.txt` file specifies testing
+dependencies. To install them with `pip`:
+
+::
+
+    $ sudo pip install -r tests/requirements.txt
+
+Pylint is used with some modifications
+to the default configuration. The notable ones are:
+
+ - W0142 is ignored to allow usage of "magic methods"
+ - Maximum branches in function body: 20
+ - Maximum statements in function body: 100
+
+For others please see the [Design] section in pylint-rc.ini. Our
+target is to keep up a score of *10.0/10* in Pylint's reports. Tests
+on Travis will fail if Pylint doesn't give 10.0/10. This is
+intentationally used to ensure uniform code structure and quality.
+
+Run unit tests from the root of the repository:
+
+::
+
+    $ nosetests --exe -v
+
+Run pylint from root of the repository:
+
+::
+
+    $ pylint --rcfile=pylint-rc.ini pyavrophonetic
+
+We need more testers
+--------------------
+
+If you find any bugs, please report them in the Issues queue. As
 always, before you report any new issue, please check that it has not
 been already posted by someone else.
 
