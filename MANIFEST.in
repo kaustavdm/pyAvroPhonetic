@@ -1,4 +1,0 @@
-include *.rst
-include LICENSE
-include ChangeLog
-recursive-include pyavrophonetic *.json *.py

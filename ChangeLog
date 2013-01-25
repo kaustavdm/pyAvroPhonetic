@@ -1,5 +1,7 @@
 2013-01-25  Kaustav Das Modak  <kaustav.dasmodak@yahoo.co.in>
 
+	* setup.py: Switched packaging to Distribute
+
 	* README.rst : Added Acknowledgements section
 
 	* tests/test_utils_validate.py (test_is_exact): Added assertions
