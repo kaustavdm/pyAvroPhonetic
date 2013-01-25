@@ -28,64 +28,103 @@
         </ul>
       </header>
       <section>
-        <h1>pyAvroPhonetic</h1>
-
+      
+<h1>
+<a name="pyavrophonetic" class="anchor" href="#pyavrophonetic"><span class="mini-icon mini-icon-link"></span></a>pyAvroPhonetic</h1>
 <p>A Python implementation of the popular Bengali phonetic-typing software
-<a href="http://omicronlab.com/">Avro Phonetic</a>.</p>
-
-<h1>Overview</h1>
-
-<p><strong>pyAvroPhonetic</strong> provides a Python package that can be imported and used
-by other Python programs or scripts. It implements the <em>Avro Phonetic
-Dictionary Search Library</em> by <a href="http://github.com/mugli">Mehdi Hasan Khan</a>.</p>
-
-<p><em>N.B. This package is still experimental and is not (yet) fit for
+<a href="http://omicronlab.com">Avro Phonetic</a>.</p>
+<h2>
+<a name="overview" class="anchor" href="#overview"><span class="mini-icon mini-icon-link"></span></a>Overview</h2>
+<p>pyAvroPhonetic provides a Python package which includes a text parser
+that converts Bangla written in Roman script to its phonetic
+equivalent in Bangla. It implements the <em>Avro Phonetic Dictionary
+Search Library</em> by <a href="https://github.com/mugli">Mehdi Hasan Khan</a>.</p>
+<p>Currently supported and tested Python versions are 2.5, 2.6 and
+2.7. The code has not been tested on Python 3, but porting it to
+Python 3 is on the agenda. It will be possible once the simplejson
+library is stable for Python 3.</p>
+<p><em>N.B. This package is under development and is not yet fit for
 production use.</em></p>
-
-<h2>Inspirations</h2>
-
+<h3>
+<a name="inspirations" class="anchor" href="#inspirations"><span class="mini-icon mini-icon-link"></span></a>Inspirations</h3>
 <p>This package is inspired from <a href="https://github.com/torifat">Rifat Nabi</a>'s <a href="https://github.com/torifat/jsAvroPhonetic">jsAvroPhonetic</a>. So
 far, the code is a direct (and shameless) translation of
 jsAvroPhonetic into Python.</p>
-
-<h2>Installation</h2>
-
-<p>Using Git:</p>
-
-<pre><code>$ git clone https://github.com/kaustavdm/pyAvroPhonetic
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="mini-icon mini-icon-link"></span></a>Installation</h2>
+<p>Using Pip (the easy way):</p>
+<pre>
+$ sudo pip install PyAvroPhonetic
+</pre>
+<p>Using Git (needs git):</p>
+<pre>
+$ git clone https://github.com/kaustavdm/pyAvroPhonetic
 $ cd pyAvroPhonetic
+$ python setup.py build
 $ sudo python setup.py install
-</code></pre>
-
-<p>Using Pip:</p>
-
-<pre><code>$ sudo pip install PyAvroPhonetic
-</code></pre>
-
-<h2>Usage</h2>
-
+</pre>
+<p>Using Git in a Virtualenv (needs git and virtualenv):</p>
+<pre>
+$ virtualenv --distribute pyAvroPhonetic
+$ cd pyAvroPhonetic
+$ source bin/activate
+$ git clone https://github.com/kaustavdm/pyAvroPhonetic
+$ cd pyAvroPhonetic
+$ python setup.py build
+$ python setup.py install
+</pre>
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="mini-icon mini-icon-link"></span></a>Usage</h2>
 <p>At present only a subset of features have been implemented. When
 implemented, the parser can be accessed as:</p>
-
-<div class="highlight"><pre><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pyavrophonetic</span> <span class="kn">import</span> <span class="n">avro</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span> <span class="n">avro</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s">'aami banglay gaan gai'</span><span class="p">)</span>
-<span class="err">আমি</span> <span class="err">বাংলায়</span> <span class="err">গান</span> <span class="err">গাই</span>
-</pre></div>
-
-<h2>Contributing</h2>
-
+<pre>
+&gt;&gt;&gt; from pyavrophonetic import avro
+&gt;&gt;&gt; avro.parse('aami banglay gaan gai')
+</pre>
+<h2>
+<a name="contributing" class="anchor" href="#contributing"><span class="mini-icon mini-icon-link"></span></a>Contributing</h2>
 <p><strong>Fork</strong> -&gt; <strong>Do your changes</strong> -&gt; <strong>Send a Pull Request</strong>. It's that
 easy!</p>
-
+<h3>
+<a name="note-for-developers" class="anchor" href="#note-for-developers"><span class="mini-icon mini-icon-link"></span></a>Note for developers</h3>
 <p>Coding style follows <a href="http://www.python.org/dev/peps/pep-0008/">PEP 8</a> along with <a href="http://www.python.org/dev/peps/pep-0257/">PEP 257</a> for Docstring
-conventions.</p>
-
-<p>Also, if you find any bugs, please report them in the Issues queue. As
+conventions. Unit tests are run using the Nose library and syntax and style
+checking is done with Pylint.</p>
+<p>Please install these two libraries in your development
+environment. The tests/requirements.txt file specifies testing
+dependencies. To install them with pip:</p>
+<pre>
+$ sudo pip install -r tests/requirements.txt
+</pre>
+<p>Pylint is used with some modifications
+to the default configuration. The notable ones are:</p>
+<blockquote>
+<ul>
+<li>W0142 is ignored to allow usage of "magic methods"</li>
+<li>Maximum branches in function body: 20</li>
+<li>Maximum statements in function body: 100</li>
+</ul>
+</blockquote>
+<p>For others please see the [Design] section in pylint-rc.ini. Our
+target is to keep up a score of <em>10.0/10</em> in Pylint's reports. Tests
+on Travis will fail if Pylint doesn't give 10.0/10. This is
+intentationally used to ensure uniform code structure and quality.</p>
+<p>Run unit tests from the root of the repository:</p>
+<pre>
+$ nosetests --exe -v
+</pre>
+<p>Run pylint from root of the repository:</p>
+<pre>
+$ pylint --rcfile=pylint-rc.ini pyavrophonetic
+</pre>
+<h3>
+<a name="we-need-more-testers" class="anchor" href="#we-need-more-testers"><span class="mini-icon mini-icon-link"></span></a>We need more testers</h3>
+<p>If you find any bugs, please report them in the Issues queue. As
 always, before you report any new issue, please check that it has not
 been already posted by someone else.</p>
-
-<h2>Acknowledgements</h2>
-
+<h2>
+<a name="acknowledgements" class="anchor" href="#acknowledgements"><span class="mini-icon mini-icon-link"></span></a>Acknowledgements</h2>
+<blockquote>
 <ul>
 <li>Mehdi Hasan Khan for originally developing and maintaining Avro
 Phonetic</li>
@@ -96,11 +135,13 @@ the Avro dictionary and the way it works</li>
 <li>
 <a href="https://github.com/sarim">Sarim Khan</a> for writing ibus-avro which helped to clarify my
 concepts further</li>
-</ul><h2>License</h2>
-
-<p>Copyright (C) 2013 Kaustav Das Modak <a href="mailto:kaustav.dasmodak@yahoo.co.in">kaustav.dasmodak@yahoo.co.in</a>.</p>
-
-<pre><code>This file is part of pyAvroPhonetic.
+</ul>
+</blockquote>
+<h2>
+<a name="license" class="anchor" href="#license"><span class="mini-icon mini-icon-link"></span></a>License</h2>
+<p>Copyright (C) 2013 Kaustav Das Modak &lt;<a href="mailto:kaustav.dasmodak%40yahoo.co.in">kaustav.dasmodak@yahoo.co.in</a>&gt;.</p>
+<pre>
+This file is part of pyAvroPhonetic.
 
 pyAvroPhonetic is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -114,9 +155,10 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with pyAvroPhonetic.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
-</code></pre>
-
-<p>The full license text can be found in <code>LICENSE</code>.</p>
+</pre>
+<p>The full license text can be found in <tt>LICENSE</tt>.</p>
+        
+        
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/kaustavdm">kaustavdm</a></p>
