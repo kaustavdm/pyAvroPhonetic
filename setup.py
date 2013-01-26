@@ -15,6 +15,7 @@ setup(name='PyAvroPhonetic',
       download_url='https://github.com/kaustavdm/pyAvroPhonetic/zipball/' + __version__,
       packages=find_packages(exclude=["*.tests", "*.tests.*", "tests.*", "tests"]),
       package_data = {'pyavrophonetic': ['*.rst', 'resources/*.json']},
+      include_package_data = True,
       install_requires=["simplejson >= 3.0.0"],
       license='GNU GPL v3 or later',
       classifiers=[

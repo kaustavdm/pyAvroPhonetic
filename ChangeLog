@@ -1,3 +1,9 @@
+2013-01-26  Kaustav Das Modak  <kaustav.dasmodak@yahoo.co.in>
+
+	* setup.py: Add package data from MANIFEST.in. Fix package install
+
+	* MANIFEST.in: Bring back to declare package data dependencies
+
 2013-01-25  Kaustav Das Modak  <kaustav.dasmodak@yahoo.co.in>
 
 	* setup.py: Switched packaging to Distribute
