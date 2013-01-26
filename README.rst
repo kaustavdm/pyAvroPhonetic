@@ -78,8 +78,7 @@ Without Pip
 Usage
 =====
 
-At present only a subset of features have been implemented. When
-implemented, the parser can be accessed as:
+At present, only the text parser has been implemented. It can be accessed as:
 
 ::
 
