@@ -33,13 +33,28 @@ jsAvroPhonetic into Python.
 Installation
 ============
 
-Using Pip (the easy way):
+With Pip
+--------
+
+**Option 1. Using Pip (the easy way) (recommended):**
 
 ::
 
     $ sudo pip install PyAvroPhonetic
 
-Using Git (needs git):
+**Option 2. Using Pip in a Virtualenv (needs virtualenv):**
+
+::
+
+    $ virtualenv pyAvroPhonetic
+    $ cd pyAvroPhonetic
+    $ source bin/activate
+    $ pip install PyAvroPhonetic
+
+Without Pip
+-----------
+
+**Option 3. Using Git (needs git):**
 
 ::
 
@@ -48,11 +63,11 @@ Using Git (needs git):
     $ python setup.py build
     $ sudo python setup.py install
 
-Using Git in a Virtualenv (needs git and virtualenv):
+**Option 4. Using Git in a Virtualenv (needs git and virtualenv):**
 
 ::
 
-    $ virtualenv --distribute pyAvroPhonetic
+    $ virtualenv pyAvroPhonetic
     $ cd pyAvroPhonetic
     $ source bin/activate
     $ git clone https://github.com/kaustavdm/pyAvroPhonetic
