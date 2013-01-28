@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- filename: ibus-pyavro.xml -->
+<component>
+  <name>org.freedesktop.IBus.pyAvro</name>
+  <description>Avro Phonetic -- Python Implementation</description>
+  <exec>/usr/bin/env python -m ibuspyavro.main --ibus</exec>
+  <version>0.1</version>
+  <author>Kaustav Das Modak &lt;kaustav.dasmodak@yahoo.co.in&gt;</author>
+  <license>GNU GPL v3+</license>
+  <homepage>https://github.com/kaustavdm/pyAvroPhonetic</homepage>
+  <textdomain>ibus-pyavro</textdomain>
+
+  <engines>
+    <engine>
+      <name>ibus-pyavro</name>
+      <language>bn</language>
+      <license>GNU GPL v3+</license>
+      <author>Kaustav Das Modak &lt;kaustav.dasmodak@yahoo.co.in&gt;</author>
+      <!-- <icon></icon> -->
+      <layout>bn</layout>
+      <longname>pyAvroPhonetic</longname>
+      <description>Avro Phonetic Input Method - Python</description>
+      <rank>0</rank>
+    </engine>
+  </engines>
+
+</component>

@@ -1,2 +1,3 @@
 include LICENSE *.py *.rst
 recursive-include pyavrophonetic *.json *.rst
+recursive-include ibuspyavro *.xml
