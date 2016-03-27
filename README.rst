@@ -2,6 +2,10 @@
 pyAvroPhonetic
 ==============
 
+**NOTICE:**: This repository is not maintained any longer. Please take a look at this `auvipy's fork`_, for further developments.
+
+----
+
 A Python implementation of the popular Bengali phonetic-typing software
 `Avro Phonetic`_.
 
@@ -184,3 +188,4 @@ The full license text can be found in ``LICENSE``.
    :target: https://travis-ci.org/kaustavdm/pyAvroPhonetic
 .. _Md Enzam Hossain: https://github.com/ienzam
 .. _Sarim Khan: https://github.com/sarim
+.. _auvipy's fork: https://github.com/auvipy/pyAvroPhonetic
